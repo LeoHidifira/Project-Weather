@@ -112,9 +112,15 @@ export async function getWeather(
 
   const { current_weather: currentWeather, hourly, hourly_units: hourlyUnits } = data
   const currentTime = currentWeather.time
-  const timeIndex = hourly.time?.indexOf(currentTime)
+  const hourlyTimes = hourly.time ?? []
+  let timeIndex = hourlyTimes.indexOf(currentTime)
 
-  if (timeIndex === undefined || timeIndex < 0) {
+  if (timeIndex < 0) {
+    const currentHourTime = currentTime.replace(/:\d{2}$/, ':00')
+    timeIndex = hourlyTimes.indexOf(currentHourTime)
+  }
+
+  if (timeIndex < 0) {
     return null
   }
 

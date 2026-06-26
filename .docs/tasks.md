@@ -36,43 +36,43 @@ Critério de aprovação:
 - O módulo centraliza todas as requisições à API e retorna `null` corretamente quando a cidade não existe ou quando os dados do clima são inválidos.
 
 ### 4. Construir a interface base e os estados da aplicação
-- [ ] Criar o layout da página com campo de busca, card principal e áreas de sidebar/principal.
-- [ ] Implementar o estado vazio inicial com mensagem convidativa.
-- [ ] Implementar o estado de carregamento com feedback visual durante a busca.
-- [ ] Garantir que o campo de busca só dispare a requisição quando não estiver vazio após trim.
+- [x] Criar o layout da página com campo de busca, card principal e áreas de sidebar/principal.
+- [x] Implementar o estado vazio inicial com mensagem convidativa.
+- [x] Implementar o estado de carregamento com feedback visual durante a busca.
+- [x] Garantir que o campo de busca só dispare a requisição quando não estiver vazio após trim.
 
 Critério de aprovação:
 - A interface inicia no empty state, mostra loading durante a busca e não faz requisição com input vazio.
 
 ### 5. Integrar a busca e exibir os dados do clima
-- [ ] Conectar o formulário de busca ao fluxo principal: Enter e clique no botão devem disparar a busca.
-- [ ] Exibir temperatura, cidade/país, data formatada no fuso da cidade e dia/noite na sidebar.
-- [ ] Exibir umidade, sensação térmica, precipitação e vento na área principal.
-- [ ] Aplicar o mapeamento de weather code em português e a direção cardinal do vento.
+- [x] Conectar o formulário de busca ao fluxo principal: Enter e clique no botão devem disparar a busca.
+- [x] Exibir temperatura, cidade/país, data formatada no fuso da cidade e dia/noite na sidebar.
+- [x] Exibir umidade, sensação térmica, precipitação e vento na área principal.
+- [x] Aplicar o mapeamento de weather code em português e a direção cardinal do vento.
 
 Critério de aprovação:
 - Ao buscar uma cidade válida, a UI exibe todos os campos obrigatórios com os valores formatados conforme o PRD.
 
 ### 6. Tratar falhas e garantir comportamento do empty state
-- [ ] Quando a cidade não for encontrada, retornar ao estado vazio sem mostrar erro técnico.
-- [ ] Quando o forecast falhar ou vier incompleto, retornar ao estado vazio sem mostrar erro técnico.
-- [ ] Garantir que a interface não fique parcialmente preenchida em caso de falha.
+- [x] Quando a cidade não for encontrada, retornar ao estado vazio sem mostrar erro técnico.
+- [x] Quando o forecast falhar ou vier incompleto, retornar ao estado vazio sem mostrar erro técnico.
+- [x] Garantir que a interface não fique parcialmente preenchida em caso de falha.
 
 Critério de aprovação:
 - Cenários de falha resultam no mesmo empty state visual definido no PRD.
 
 ### 7. Ajustar visual e responsividade
-- [ ] Aplicar o visual proposto: fundo escuro, card branco arredondado, max-width 800px e contraste adequado.
-- [ ] Tornar o layout responsivo para mobile, empilhando sidebar e área principal.
-- [ ] Ajustar espaçamento, tipografia e elementos visuais para uma experiência consistente.
+- [x] Aplicar o visual proposto: fundo escuro, card branco arredondado, max-width 800px e contraste adequado.
+- [x] Tornar o layout responsivo para mobile, empilhando sidebar e área principal.
+- [x] Ajustar espaçamento, tipografia e elementos visuais para uma experiência consistente.
 
 Critério de aprovação:
 - O layout fica corretamente centralizado, com boa leitura em desktop e mobile, seguindo o conceito visual do PRD.
 
 ### 8. Revisão final da implementação
-- [ ] Validar que todas as funcionalidades do PRD foram contempladas.
-- [ ] Confirmar que não há requisições diretas à API fora do módulo de serviço.
-- [ ] Revisar os critérios de aceite do PRD e marcar o que foi realmente implementado.
+- [x] Validar que todas as funcionalidades do PRD foram contempladas.
+- [x] Confirmar que não há requisições diretas à API fora do módulo de serviço.
+- [x] Revisar os critérios de aceite do PRD e marcar o que foi realmente implementado.
 
 Critério de aprovação:
 - A aplicação atende aos critérios principais do PRD e não há inconsistências evidentes entre a implementação e a especificação.
